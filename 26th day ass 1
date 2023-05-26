@@ -1,0 +1,19 @@
+#include<stdio.h>
+main()
+{
+char str[100];
+int i=0,ch,splchar,lwrcase;
+splchar=lwrcase=0;
+gets(str);
+while(str[i]!='\0')
+{
+ch=str[i];
+if(ch>='a'&&ch<='z')
+lwrcase++;
+else
+splchar++;
+i++;
+}
+printf("\nlowercase:%d",lwrcase);
+printf("\nspecial character:%d",splchar);
+}
