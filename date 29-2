@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+int arr[max size];
+int i,size,num,pos;
+printf("enter the size of the array");
+scanf("%d",&size);
+printf("enter the elements of the array");
+for(i=0;i<size;i++)
+{
+scanf("%d",&arr[i]);
+}
+printf("enter the element to insert");
+scanf("%d",&num);
+printf("enter the element position");
+scanf("%d",&pos);
+if(pos>size+1||pos<=0)
+{
+printf("out of bounds");
+}
+else
+{
+for(i=size;i>=pos;i--)
+{
+arr[i]=arr[i-1];
+}
+arr[pos-1]=num;
+size++;
+printf("array elements after insertion");
+for(i=0;i<size;i++)
+{
+printf("%d\t",arr[i]);
+}
+}
+return 0;
+}
